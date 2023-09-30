@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="335dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="15dp"
+    android:screenOrientation="portrait"
+    android:background="@drawable/rounded_rect"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/task_category"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@animator/mybutton1"
+        android:drawableLeft="@drawable/category2"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_time"
+        app:layout_constraintEnd_toStartOf="@+id/task_priority"
+        app:layout_constraintTop_toTopOf="@+id/task_time" />
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="Do math homework"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/task_date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/task_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_category"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="1dp"
+        android:text="Date: 2023-04-19"
+        android:textColor="#AFAFAF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/task_name" />
+
+    <TextView
+        android:id="@+id/task_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_category"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Date: 2023-04-19"
+        android:textColor="#AFAFAF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/task_date" />
+
+    <TextView
+        android:id="@+id/task_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/task_date"
+        android:layout_marginEnd="10dp"
+        android:background="@animator/mybutton2"
+        android:drawableLeft="@drawable/priority"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:text="P"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_time" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
